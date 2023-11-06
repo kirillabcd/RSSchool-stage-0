@@ -1,0 +1,44 @@
+.zoom-in-card {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.zoom-in-card--visible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoom-in-card__container {
+    position: relative;
+}
+
+.zoom-in-card__photo {
+    display: block;
+    width: auto;
+    max-height: 100vh;
+}
+
+.download-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: rgba($white-color, 0.5);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        scale: 1.2;
+    }
+}

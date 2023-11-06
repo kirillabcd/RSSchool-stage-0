@@ -1,0 +1,25 @@
+.credits {
+    padding: 20px;
+    width: 100%;
+    background-image: url(../assets/img/header_bg.svg);
+    background-color: $black-color;
+    background-position: center;
+    border-radius: 20px 20px 0 0;
+
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+
+    box-shadow: 5px 5px 20px #c9c9c9, -5px -5px 20px #ffffff;
+}
+
+.credits-item {
+    height: 40px;
+    width: 40px;
+    width: auto;
+
+    font-family: $header-font;
+    font-size: 48px;
+    color: #ffffff;
+    line-height: 90%;
+}

@@ -1,0 +1,23 @@
+.wrapper {
+    background-color: rgb(226, 228, 231);
+    height: 100%;
+}
+.container {
+    width: 95%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar-track {
+    width: 12px;
+}
+
+.lock-scroll {
+    overflow: hidden;
+    touch-action: none;
+    padding: 0 12px 0 0;
+}

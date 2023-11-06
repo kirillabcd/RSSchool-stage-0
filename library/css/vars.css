@@ -1,0 +1,24 @@
+:root {
+  /* project collors */
+  --font-black-сolor: #000000;
+  --elem-black-сolor: #0c0c0e;
+  --gold-сolor: #bb945f;
+  --white-сolor: #ffffff;
+  --grey-сolor: #8e8e8e;
+  --red-color: #d75046;
+
+  --first-font-color: var(--font-black-color);
+  --second-font-color: var(--gold-сolor);
+
+  /* project fonts */
+
+  --main-font: "Inter"; /* !! write main font famyly */
+  --main-weight: 400; /* !! write main font weight */
+  --second-font: "Forum"; /* !! write second font family */
+  --bold-font-weight: 600;
+
+  --font-family: var(--main-font), sans-serif; /* default font family */
+  --font-color: var(--first-font-color); /* default font color */
+  --font-size: 20px; /* default font size */
+  --font-weight: var(--main-weight); /* default font weight */
+}

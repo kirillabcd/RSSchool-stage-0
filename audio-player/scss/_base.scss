@@ -1,0 +1,120 @@
+.container {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 1.25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: $main-font;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $main-color;
+}
+
+.gradient-bg {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(40deg, $background1, $background2);
+}
+
+.svg-hidden {
+    display: none;
+}
+
+.decor-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+
+    filter: url(#goo) blur(20px);
+}
+.dec {
+    position: absolute;
+    mix-blend-mode: color;
+}
+.dec1 {
+    background: radial-gradient(circle at center, rgba($dec1, 0.8) 0%, rgba($dec1, 0) 50%),
+        no-repeat;
+    width: $circle-size * 1.3;
+    height: $circle-size * 1.3;
+    top: calc(50% - $circle-size/1.5);
+    left: calc(3%);
+
+    transform-origin: calc(50% - 200px);
+    opacity: 1;
+
+    animation: moveInCircle 20s ease infinite;
+    animation-play-state: paused;
+    &.animated {
+        animation-play-state: running;
+    }
+}
+.dec2 {
+    background: radial-gradient(circle at center, rgba($dec2, 0.8) 0%, rgba($dec2, 0) 50%) no-repeat;
+    width: $circle-size;
+    height: $circle-size;
+    top: calc(50% - $circle-size / 2);
+    left: calc(50% - $circle-size / 2);
+
+    transform-origin: calc(50% - 500px);
+    opacity: 1;
+
+    animation: moveInCircle 30s reverse infinite;
+    animation-play-state: paused;
+    &.animated {
+        animation-play-state: running;
+    }
+}
+.dec3 {
+    background: radial-gradient(circle at center, rgba($dec3, 0.8) 0%, rgba($dec3, 0) 70%) no-repeat;
+    width: $circle-size;
+    height: $circle-size;
+    top: calc(50% - $circle-size / 2 + 200px);
+    left: calc(50% - $circle-size / 2 - 500px);
+
+    transform-origin: calc(50% + 400px);
+    opacity: 1;
+
+    animation: moveInCircle 30s linear infinite;
+    animation-play-state: paused;
+    &.animated {
+        animation-play-state: running;
+    }
+}
+.dec4 {
+    background: radial-gradient(circle at center, rgba($dec4, 0.8) 0%, rgba($dec4, 0) 50%) no-repeat;
+    width: $circle-size;
+    height: $circle-size;
+    top: calc(50% - $circle-size / 2);
+    left: calc(50% - $circle-size / 2);
+
+    transform-origin: calc(50% - 200px);
+    opacity: 0.8;
+
+    animation: moveHorizontal 30s ease infinite;
+    animation-play-state: paused;
+    &.animated {
+        animation-play-state: running;
+    }
+}
+.dec5 {
+    background: radial-gradient(circle at center, rgba($dec5, 0.8) 0%, rgba($dec5, 0) 50%) no-repeat;
+    width: $circle-size * 1.1;
+    height: $circle-size * 1.1;
+    top: calc(70% - $circle-size);
+    left: calc(70% - $circle-size);
+
+    transform-origin: calc(50% - 800px) calc(50% + 200px);
+    opacity: 0.8;
+
+    animation: moveInCircle 30s ease infinite;
+    animation-play-state: paused;
+    &.animated {
+        animation-play-state: running;
+    }
+}

@@ -1,0 +1,76 @@
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.controls__play-song-button {
+    position: relative;
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 50%;
+    background-color: $main-color;
+    transition: 0.5s ease;
+
+    .button-inner {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translateY(-50%);
+        width: 0.625rem;
+        height: 1.875rem;
+        border-radius: 0.125rem;
+        background-color: $accent-color;
+        transition: all 0.3s ease;
+    }
+
+    .button-inner-second {
+        left: 55%;
+        transform-origin: center;
+        transition: all 0.3s ease;
+    }
+}
+
+.controls__play-song-button:not(.controls__play-song-button--paused) {
+    -webkit-animation: pulsate-bck 1s ease-in-out infinite both;
+    animation: pulsate-bck 1s ease-in-out infinite both;
+    box-shadow: 0px 0px 20px 10px rgba($accent-color, 0.6);
+}
+
+.controls__play-song-button--paused {
+    .button-inner-first {
+        width: 35%;
+        left: 37%;
+        transform: translate(-50% -50%);
+        border-radius: 0;
+        clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+        transition: all 0.3s ease;
+    }
+
+    .button-inner-second {
+        transform: translateY(-50%) scale(0);
+        transition: all 0.3s ease;
+    }
+}
+
+.controls__song-swither {
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid $main-color;
+    border-radius: 50%;
+    transition: 0.5s ease;
+    &:hover {
+        background-color: $main-color;
+    }
+    &:hover > .controls__svg {
+        @media screen and (min-width: 768px) {
+            fill: $accent-color;
+        }
+    }
+}
+
+.controls__svg {
+    transform: translateY(5%);
+    transition: 0.5s ease;
+}

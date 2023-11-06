@@ -1,0 +1,44 @@
+.info {
+    position: absolute;
+    bottom: 20px;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+.info__row {
+    display: flex;
+    justify-content: space-between;
+
+    width: 70%;
+    gap: 20px;
+    height: 24px;
+    transform: translateX(-92%);
+    transition: transform 0.5s ease;
+
+    &.info__row--visible {
+        transform: translateX(0);
+
+        > .info__button {
+            transform: rotate(-180deg);
+        }
+    }
+}
+.info__button {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    transition: transform 0.5s ease 0.2s;
+}
+
+.rs-logo {
+    height: 22px;
+}
+.gh-logo {
+    height: 22px;
+}
+
+.year {
+    font-size: 20px;
+    line-height: 20px;
+}

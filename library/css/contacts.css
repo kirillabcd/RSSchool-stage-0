@@ -1,0 +1,84 @@
+.contacts__content {
+  padding: 20px 0 40px 0;
+}
+.contacts__info-box {
+  padding: 61px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px 40px;
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
+}
+
+.phones__header {
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+.phones__list {
+  padding: 40px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: 540px) {
+    align-items: center;
+  }
+}
+
+.phones__list.small-padding {
+  padding: 20px 0 34px 0;
+
+  @media (max-width: 1155px) {
+    padding: 20px 0 0 0;
+  }
+}
+
+.bold-weight {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.phones__item,
+.phones__link {
+  max-width: 505px;
+  line-height: 40px;
+  letter-spacing: 2px;
+
+  @media (max-width: 540px) {
+    text-align: center;
+    max-width: 280px;
+    word-wrap: normal;
+  }
+}
+
+.phones__link:hover,
+.bold-weight:hover {
+  @media (min-width: 769px) {
+    text-decoration: underline;
+  }
+}
+.contacts__info-map {
+  @media (max-width: 1280px) {
+    text-align: center;
+  }
+}
+
+.g-map {
+  min-width: 696px;
+  min-height: 414px;
+
+  @media (max-width: 1280px) {
+    min-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    min-width: 96%;
+  }
+
+  @media (max-width: 615px) {
+    min-width: 100%;
+  }
+}

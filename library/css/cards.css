@@ -1,0 +1,222 @@
+.library-cards__content {
+    padding: 16px 0 40px 0;
+}
+
+.library-cards__box {
+    padding: 61px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px 60px;
+
+    @media (max-width: 1155px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 413px) {
+        padding: 101px 0 0 0;
+    }
+}
+.library-cards__form-box {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+
+    @media (max-width: 640px) {
+        width: 96%;
+    }
+}
+.library-cards__form-header {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-align: center;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.library-cards__form-header-authorised {
+    &.hidden {
+        display: none;
+    }
+}
+.library-cards__form-body {
+    margin: 30px 0 0 0;
+    padding: 20px 20px 15px 20px;
+    border: 3px solid var(--gold-сolor);
+    background: var(--white-сolor);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.library-cards__form-content {
+    margin: 0 0 15px 0;
+    background: var(--gold-сolor);
+    padding: 17px 18px 25px 18px;
+}
+.library-cards__form-title {
+    font-family: var(--second-font);
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+}
+.library-cards__form-inputs {
+    padding: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.card-input {
+    max-width: 520px;
+    height: 66px;
+    border: none;
+    border-radius: 10px;
+    background: var(--white-сolor);
+
+    color: var(--gold-сolor);
+    font-family: var(--second-font);
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    padding: 8px 15px 8px 15px;
+}
+
+.card-input::placeholder {
+    color: var(--grey-сolor);
+    font-family: var(--second-font);
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+}
+
+.card-input:focus {
+    outline: none;
+}
+
+.card-input:invalid {
+    border: 3px solid var(--red-color);
+    color: var(--red-color);
+}
+
+.library-cards__submit-wrapper {
+    padding: 5px 0 5px 0;
+}
+
+.library-cards__submit-wrapper.hidden {
+    display: none;
+}
+
+.library-cards__profile-items-wrapper {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+}
+
+.library-cards__profile-items-wrapper.hidden {
+    display: none;
+}
+
+.library-cards__profile-info-item {
+    gap: 0px;
+}
+
+.library-card__profile-icon {
+    padding: 5px 0 0 0;
+}
+
+.library-cards__count {
+    padding: 5px 0 0 0;
+    line-height: 10px; /* 200% */
+    letter-spacing: 0.2px;
+}
+
+.library-cards__profile-title {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px; /* 200% */
+    letter-spacing: 0.2px;
+}
+
+.library-cards__submit {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 242px;
+    height: 44px;
+    border: 1px solid var(--elem-black-сolor);
+    border-radius: 2px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.library-cards__submit:hover {
+    @media (min-width: 769px) {
+        border: 1px solid var(--gold-сolor);
+        background: var(--gold-сolor);
+        transition: 0.3s ease-out;
+    }
+}
+
+.library-cards__authorization-box {
+    max-width: 456px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (max-width: 1155px) {
+        align-items: center;
+    }
+}
+
+.library-cards__not-authorised-box {
+    &.hidden {
+        display: none;
+    }
+}
+
+.library-cards__authorised-box {
+    &.hidden {
+        display: none;
+    }
+}
+
+.library-cards__authorization-header {
+    font-family: var(--second-font);
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    padding: 0 0 35px 0;
+
+    @media (max-width: 1155px) {
+        padding: 0 0 40px 0;
+    }
+}
+.library-cards__authorization-description {
+    text-align: right;
+    line-height: 40px;
+    letter-spacing: 0.4px;
+    padding: 0 0 35px 0;
+
+    @media (max-width: 1155px) {
+        text-align: center;
+        padding: 0 0 43px 0;
+        min-width: 600px;
+    }
+
+    @media (max-width: 615px) {
+        min-width: 100%;
+    }
+}
+.library-cards__authorization-buttons {
+    display: flex;
+    gap: 20px;
+}
+.authorization-button {
+}

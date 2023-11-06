@@ -1,0 +1,23 @@
+/* fonts ================================================================================================================== */
+@import url(./fonts.css);
+
+/* style varaibles ======================================================================================================== */
+@import url(./vars.css);
+
+/* style reset ============================================================================================================ */
+@import url(./reset.css);
+
+/* general params ========================================================================================================= */
+@import url(./base.css);
+
+/* layouts style ========================================================================================================== */
+@import url(./modals.css);
+@import url(./header.css);
+@import url(./overlay.css);
+@import url(./welcome.css);
+@import url(./about.css);
+@import url(./favorites.css);
+@import url(./coffee_shop.css);
+@import url(./contacts.css);
+@import url(./cards.css);
+@import url(./footer.css);

@@ -1,0 +1,20 @@
+.album-cover {
+    width: 18.75rem;
+    height: 18.75rem;
+    overflow: hidden;
+    // display: flex;
+    // justify-content: center;
+}
+
+.album-cover__covers-row {
+    display: flex;
+    gap: 1.25rem;
+    transform: translateX(-300px - 20px);
+    transition: all 1s ease;
+}
+
+.album-cover__item {
+    max-width: 18.75rem;
+    max-height: 18.75rem;
+    border-radius: 30px;
+}

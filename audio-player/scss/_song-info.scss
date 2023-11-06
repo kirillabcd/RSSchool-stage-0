@@ -1,0 +1,15 @@
+.song-info {
+    height: 86px;
+    width: 301px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.song-info__author {
+    text-align: center;
+}
+.song-info__track {
+    text-align: center;
+}

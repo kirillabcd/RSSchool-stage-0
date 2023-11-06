@@ -1,0 +1,334 @@
+body {
+    background-image: url(./img/bg.png);
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Arco';
+    src: url(./fonts/ARCO.ttf);
+}
+
+@font-face {
+    font-family: 'JosefinSans';
+    src: url(./fonts/JosefinSans-VariableFont.ttf);
+}
+
+.container {
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-box {
+    position: relative;
+    height: 160px;
+}
+
+.title {
+    font-family: 'Arco';
+    font-size: 78px;
+    font-weight: 300;
+    color: rgba(54, 54, 54);
+}
+
+.flower-decor {
+    z-index: -1;
+    position: absolute;
+}
+
+.flower-decor--title {
+    top: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.game-box {
+    position: relative;
+}
+
+.flower-decor--small-left {
+    left: -150px;
+    top: 30px;
+}
+
+.flower-decor--small-right {
+    right: -100px;
+    top: 0px;
+}
+
+.flower-decor--big-left {
+    left: -200px;
+    top: 200px;
+    & > .decor-inner img {
+        width: 250px;
+        height: auto;
+    }
+}
+
+.decor-message-bubble {
+    position: relative;
+    width: 250px;
+    /* height: 100px; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: #f69a93;
+    transform: translate(-110px, -50px);
+    scale: 0;
+    height: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -20%;
+        left: 70%;
+        rotate: 15deg;
+        border-width: 15px;
+        border-style: solid;
+        border-color: transparent transparent #f69a93 transparent;
+    }
+
+    &.decor-message-bubble--visible {
+        animation: throwMessage 0.3s ease;
+        scale: 1;
+        height: 120px;
+    }
+}
+.decor-message-text {
+    padding: 10px 20px;
+    font-family: 'JosefinSans';
+    text-align: center;
+}
+
+@keyframes throwMessage {
+    0% {
+        scale: 0;
+        height: 0;
+    }
+
+    100% {
+        scale: 1;
+        height: 120px;
+    }
+}
+
+.flower-decor--score-right {
+    right: -220px;
+    top: 180px;
+    z-index: 2;
+    & > .score-inner img {
+        width: 230px;
+        height: auto;
+    }
+}
+
+.score-inner {
+    position: relative;
+}
+
+.score-value {
+    position: absolute;
+    width: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    text-align: center;
+    text-align: center;
+    font-family: 'Arco';
+    font-size: 42px;
+    line-height: 41px;
+}
+
+.game-body {
+    position: relative;
+    background-color: #f69a93;
+    border-radius: 30px;
+    box-shadow: 14px 14px 0 rgb(54, 54, 54);
+    z-index: 2;
+
+    transform-style: preserve-3d;
+
+    transition: transform 0.5s ease;
+
+    &.flip {
+        transform: rotateY(180deg);
+    }
+}
+
+.cards-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    padding: 20px;
+    width: 460px;
+
+    backface-visibility: hidden;
+}
+
+.endgame-box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.score__title {
+    font-family: 'ARCO';
+    text-align: center;
+    color: rgba(54, 54, 54);
+    font-size: 38px;
+}
+
+.score-table {
+    width: 50%;
+    margin: 0 auto;
+    font-family: 'JosefinSans';
+    font-size: 24px;
+}
+th,
+td {
+    text-align: center;
+}
+
+.play-again-btn {
+    background-color: #f3e8da;
+    box-shadow: -5px 5px 0 rgb(54, 54, 54);
+    color: rgb(54, 54, 54);
+    padding: 10px 20px 10px 20px;
+    font-family: 'ARCO';
+    font-size: 24px;
+    border-radius: 10px;
+    border: none;
+    margin: 0 0 40px 0;
+    transition: 0.3s ease;
+
+    &:hover {
+        box-shadow: -8px 8px 0 rgb(54, 54, 54);
+        scale: 1.02;
+    }
+
+    &:active {
+        box-shadow: -3px 3px 0 rgb(54, 54, 54);
+        scale: 0.98;
+    }
+}
+.card {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #f3e8da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+
+    font-size: 60px;
+    text-align: center;
+    line-height: 100px;
+    color: rgb(54, 54, 54);
+
+    &:active {
+        transform: scale(0.97);
+        transition: transform 0.2s ease;
+    }
+
+    &.flip {
+        transform: rotateY(180deg);
+    }
+
+    &.matched {
+        position: relative;
+        animation: matched 0.3s ease;
+        box-shadow: -5px 5px 0 rgb(54, 54, 54);
+
+        &::before {
+            content: '🔥  🔥';
+            position: absolute;
+            right: 0;
+            top: 40px;
+            opacity: 0;
+            font-size: 36px;
+            animation: up 1.5s ease;
+            animation-delay: 0.3s;
+        }
+
+        &::after {
+            content: '🔥    🔥';
+            position: absolute;
+            left: 0;
+            top: 50px;
+            opacity: 0;
+            font-size: 36px;
+            animation: up 1.5s ease;
+            animation-delay: 0.3s;
+        }
+    }
+}
+
+.frontside {
+    backface-visibility: hidden;
+    max-width: 80px;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+}
+.backside {
+    backface-visibility: hidden;
+}
+
+@keyframes matched {
+    0% {
+        transform: translateX(0) rotateX(-15deg) rotateY(180deg);
+        box-shadow: 0px 0px 0 rgb(54, 54, 54);
+    }
+
+    25% {
+        transform: translateX(-5px) rotateY(180deg);
+    }
+
+    50% {
+        transform: translateX(5px) rotateX(-15deg) rotateY(180deg);
+    }
+
+    75% {
+        transform: translateX(-5px) rotateY(180deg);
+    }
+
+    100% {
+        transform: translateX(0) rotateX(-15deg) rotateY(180deg);
+        box-shadow: -5px 5px 0 rgb(54, 54, 54);
+    }
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+}

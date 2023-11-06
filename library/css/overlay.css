@@ -1,0 +1,26 @@
+body.lock-scroll {
+    overflow: hidden;
+    touch-action: none;
+}
+
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.overlay.open {
+    position: fixed;
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 12, 14, 0.8);
+    z-index: 5;
+}
+
+.burger-overlay.open {
+    z-index: 1;
+    background-color: rgba(12, 12, 14, 0.3);
+}

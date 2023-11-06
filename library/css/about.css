@@ -1,0 +1,196 @@
+.about__container {
+  overflow: hidden;
+}
+
+.about__content {
+  padding: 20px 0 40px 0;
+}
+
+.about__carousel-box {
+  position: relative;
+  padding: 20px 0 0 0;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @media (max-width: 1439px) {
+    max-width: 925px;
+  }
+
+  @media (max-width: 965px) {
+    max-width: 450px;
+  }
+
+  @media (max-width: 545px) {
+    max-width: 380px;
+  }
+
+  @media (max-width: 425px) {
+    max-width: 320px;
+  }
+
+  @media (max-width: 375px) {
+    max-width: 280px;
+  }
+}
+
+.about__carousel-wrapper {
+  display: flex;
+  overflow: hidden;
+  max-width: 1400px;
+  max-height: 560px;
+}
+
+.about__carousel {
+  display: flex;
+  position: relative;
+  gap: 25px;
+  transition: left 0.8s;
+}
+
+.carousel__item {
+  max-width: 450px;
+  @media (max-width: 545px) {
+    max-width: 380px;
+    height: auto;
+  }
+
+  @media (max-width: 425px) {
+    max-width: 320px;
+  }
+
+  @media (max-width: 375px) {
+    max-width: 280px;
+  }
+}
+
+.prev-button {
+  position: absolute;
+  opacity: 1;
+
+  &.unavailable {
+    cursor: default;
+    opacity: 0.1;
+  }
+
+  @media (max-width: 965px) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -72px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid var(--elem-black-сolor);
+    border-left: 2px solid var(--elem-black-сolor);
+    border-radius: 2px;
+    transform: translateY(50%) rotate(45deg);
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      rotate: -45deg;
+      top: -320px;
+      bottom: -320px;
+      left: -60px;
+      right: -60px;
+    }
+  }
+
+  @media (max-width: 615px) {
+    display: none;
+  }
+}
+.next-button {
+  position: absolute;
+  opacity: 1;
+
+  &.unavailable {
+    cursor: default;
+    opacity: 0.1;
+  }
+
+  @media (max-width: 965px) {
+    position: absolute;
+    top: 50%;
+    right: -72px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid var(--elem-black-сolor);
+    border-left: 2px solid var(--elem-black-сolor);
+    border-radius: 2px;
+    transform: translateY(50%) rotate(-135deg);
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      rotate: 135deg;
+      top: -320px;
+      bottom: -320px;
+      left: -60px;
+      right: -60px;
+    }
+  }
+
+  @media (max-width: 615px) {
+    display: none;
+  }
+}
+
+.carousel__pagination {
+  padding: 40px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  @media (max-width: 1155px) {
+    padding: 25px 0 0 0;
+  }
+}
+
+.pagination__button {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: var(--elem-black-сolor);
+  border: none;
+  cursor: pointer;
+  transition: 0.8s ease;
+
+  &:hover {
+    background-color: var(--grey-сolor);
+  }
+}
+
+.pagination__button::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+}
+
+.pagination__button.active {
+  background-color: var(--gold-сolor);
+  cursor: default;
+}
+
+.pagination__button.first-bp-1439px {
+  display: none;
+
+  @media (max-width: 1439px) {
+    display: block;
+  }
+}
+
+.pagination__button.second-bp-965px {
+  display: none;
+
+  @media (max-width: 965px) {
+    display: block;
+  }
+}

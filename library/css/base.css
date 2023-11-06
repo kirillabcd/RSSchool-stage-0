@@ -1,0 +1,94 @@
+* {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    letter-spacing: 0;
+    scroll-behavior: smooth;
+}
+
+[class*='__container'] {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title {
+    position: relative;
+    color: var(--elem-black-color);
+    font-family: var(--second-font);
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    height: 40px;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -21px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: var(--elem-black-сolor);
+}
+
+@media (max-width: 413px) {
+    .cards-title::after {
+        bottom: -61px;
+    }
+}
+.description-box {
+    padding: 61px 0 0 0;
+}
+.description-text {
+    text-align: center;
+    line-height: 40px;
+}
+
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 30px;
+    border: 1px solid var(--elem-black-сolor);
+    border-radius: 2px;
+    background-color: transparent;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    top: -5px; /* Отрицательное смещение сверху */
+    left: -5px; /* Отрицательное смещение слева */
+    right: -5px; /* Отрицательное смещение справа */
+    bottom: -5px; /* Отрицательное смещение снизу */
+}
+
+.button:hover {
+    @media (min-width: 769px) {
+        border: 1px solid var(--gold-сolor);
+        background: var(--gold-сolor);
+    }
+}
+
+.button.own {
+    border: 1px solid var(--gold-сolor);
+    color: var(--gold-сolor);
+    pointer-events: none;
+    cursor: auto;
+
+    &:hover {
+        pointer-events: none;
+        cursor: auto;
+    }
+}

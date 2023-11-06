@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.min.css" />
+        <title>RSSchool audioplayer</title>
+    </head>
+    <body>
+        <audio src="" class="audio"></audio>
+        <main>
+            <div class="gradient-bg">
+                <div class="decor-container">
+                    <svg class="svg-hidden" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="goo">
+                                <feGaussianBlur
+                                    in="SourceGraphic"
+                                    stdDeviation="10"
+                                    result="blur"
+                                />
+                                <feColorMatrix
+                                    in="blur"
+                                    mode="matrix"
+                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                                    result="goo"
+                                />
+
+                                <feBlend in="SourceGraphic" in2="goo" />
+                            </filter>
+                        </defs>
+                    </svg>
+                    <div class="dec dec1"></div>
+                    <div class="dec dec2"></div>
+                    <div class="dec dec3"></div>
+                    <div class="dec dec4"></div>
+                    <div class="dec dec5"></div>
+                </div>
+                <div class="container">
+                    <div class="player">
+                        <div class="player__body">
+                            <div class="cover-wrapper">
+                                <h1 class="title">Playlist for my wife🩶</h1>
+
+                                <div class="album-cover">
+                                    <div class="album-cover__covers-row"></div>
+                                </div>
+                            </div>
+
+                            <div class="song-wrapper">
+                                <div class="song-info">
+                                    <div class="song-info__author">Frank Ocean</div>
+                                    <div class="song-info__track">White Ferrari</div>
+                                </div>
+
+                                <div class="controls">
+                                    <button
+                                        class="controls__song-swither controls__prev-song-button"
+                                    >
+                                        <svg
+                                            class="controls__svg"
+                                            width="42"
+                                            height="42"
+                                            viewBox="0 0 42 42"
+                                            fill="#404756"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M19.2498 28.1225V13.8775C19.2498 12.46 17.6573 11.6375 16.4848 12.4425L6.38734 19.565C5.40734 20.265 5.40734 21.735 6.38734 22.4175L16.4848 29.54C17.6573 30.3625 19.2498 29.54 19.2498 28.1225ZM22.1548 22.435L32.2523 29.5575C33.4073 30.38 35.0173 29.54 35.0173 28.1225V13.8775C35.0173 12.46 33.4248 11.6375 32.2523 12.4425L22.1548 19.565C21.9238 19.7263 21.7351 19.9409 21.6048 20.1908C21.4745 20.4406 21.4065 20.7182 21.4065 21C21.4065 21.2817 21.4745 21.5594 21.6048 21.8092C21.7351 22.059 21.9238 22.2737 22.1548 22.435Z"
+                                            />
+                                        </svg>
+                                    </button>
+                                    <button
+                                        class="controls__play-song-button controls__play-song-button--paused"
+                                    >
+                                        <span class="button-inner button-inner-first"></span>
+                                        <span class="button-inner button-inner-second"></span>
+                                    </button>
+                                    <button
+                                        class="controls__song-swither controls__next-song-button"
+                                    >
+                                        <svg
+                                            class="controls__svg"
+                                            width="42"
+                                            height="42"
+                                            viewBox="0 0 42 42"
+                                            fill="#404756"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M22.7502 13.8775L22.7502 28.1225C22.7502 29.54 24.3427 30.3625 25.5152 29.5575L35.6127 22.435C36.5927 21.735 36.5927 20.265 35.6127 19.5825L25.5152 12.46C24.3427 11.6375 22.7502 12.46 22.7502 13.8775ZM19.8452 19.565L9.74766 12.4425C8.59266 11.62 6.98265 12.46 6.98265 13.8775L6.98265 28.1225C6.98265 29.54 8.57516 30.3625 9.74766 29.5575L19.8452 22.435C20.0762 22.2737 20.2649 22.0591 20.3952 21.8092C20.5255 21.5594 20.5935 21.2818 20.5935 21C20.5935 20.7183 20.5255 20.4406 20.3952 20.1908C20.2649 19.941 20.0762 19.7263 19.8452 19.565Z"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="timeline">
+                                    <div class="timeline__song-slider">
+                                        <input type="range" value="0" class="timeline__song-seek" />
+                                    </div>
+                                    <div class="timeline__time">
+                                        <div class="timeline__time timeline__current-time">
+                                            00:00
+                                        </div>
+                                        <div class="timeline__time timeline__song-duration">
+                                            03:44
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="info__row">
+                                    <a
+                                        href="https://rs.school/js-stage0/"
+                                        class="rs-link"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="./assets/logos/rs_school_js.svg"
+                                            alt=""
+                                            class="rs-logo"
+                                        />
+                                    </a>
+                                    <a
+                                        href="https://github.com/kirillabcd"
+                                        class="gh-link"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="./assets/logos/github-mark-white.svg"
+                                            alt=""
+                                            class="gh-logo"
+                                        />
+                                    </a>
+
+                                    <div class="year">'23</div>
+
+                                    <button class="info__button">
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M7.75 11.25C7.33579 11.25 7 11.5858 7 12C7 12.4142 7.33579 12.75 7.75 12.75H14.3636L11.235 15.7047C10.9339 15.9891 10.9203 16.4638 11.2047 16.765C11.4891 17.0661 11.9638 17.0797 12.265 16.7953L16.765 12.5453C16.915 12.4036 17 12.2063 17 12C17 11.7937 16.915 11.5964 16.765 11.4547L12.265 7.20474C11.9638 6.92033 11.4891 6.93389 11.2047 7.23503C10.9203 7.53617 10.9339 8.01085 11.235 8.29526L14.3636 11.25H7.75Z"
+                                                fill="#404756"
+                                            />
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM12 21.5C6.75329 21.5 2.5 17.2467 2.5 12C2.5 6.7533 6.75329 2.5 12 2.5C17.2467 2.5 21.5 6.7533 21.5 12C21.5 17.2467 17.2467 21.5 12 21.5Z"
+                                                fill="#404756"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- <script src="./js/data.js"></script> -->
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>

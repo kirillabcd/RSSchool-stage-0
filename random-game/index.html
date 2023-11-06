@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MEMORY GAME</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="title-box">
+                <h1 class="title">Memory Game</h1>
+                <div class="flower-decor flower-decor--title">
+                    <img src="./img/Daisy-Rainbow.svg" alt="decor" />
+                </div>
+            </div>
+            <div class="game-box">
+                <!-- decor items -->
+                <div class="flower-decor flower-decor--small-left">
+                    <img src="./img/smileyflowerleft.svg" alt="decor" />
+                </div>
+                <div class="flower-decor flower-decor--small-right">
+                    <img src="./img/smileyflowerright.svg" alt="decor" />
+                </div>
+                <div class="flower-decor flower-decor--big-left">
+                    <div class="decor-inner">
+                        <img src="./img/smileyflowerleft.svg" alt="decor" />
+                        <div class="decor-message-bubble">
+                            <div class="decor-message-text">Hi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flower-decor flower-decor--score-right">
+                    <div class="score-inner">
+                        <img src="./img/smileyflowerscore.svg" alt="decor" />
+                        <div class="score-value">0</div>
+                    </div>
+                </div>
+                <!-- game-body -->
+                <div class="game-body">
+                    <div class="cards-box"></div>
+                    <div class="endgame-box">
+                        <div class="score-box">
+                            <h2 class="score__title">YOUR STATS</h2>
+                            <table class="score-table">
+                                <tr>
+                                    <th>Game</th>
+                                    <th>Score</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="play-again-btn">PLAY AGAIN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js" type="module"></script>
+    </body>
+</html>
