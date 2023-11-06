@@ -1,5 +1,6 @@
 # RSS-stage0
 Projects from RSSchool stage 0
+
 Better on Chrome 😚
 
 [1. Library](https://kirillabcd.github.io/RSSchool-stage-0/library/)
