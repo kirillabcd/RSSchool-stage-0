@@ -7,7 +7,7 @@ Better on Chrome 😚
 
 [2. Audio player](https://kirillabcd.github.io/RSSchool-stage-0/audio-player/)
 
-[3. Image galery](https://kirillabcd.github.io/RSSchool-stage-0/image-gallery/)
+[3. Image gallery](https://kirillabcd.github.io/RSSchool-stage-0/image-gallery/)
 
 [4. Memory Game](https://kirillabcd.github.io/RSSchool-stage-0/random-game/)
 
